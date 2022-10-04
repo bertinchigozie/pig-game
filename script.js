@@ -42,7 +42,7 @@ btnHold.addEventListener('click', () => {
   ] += currentScore;
 
   // to check if active player as morethan 100 ponits
-  if (score[activePlayer] >= 10) {
+  if (score[activePlayer] >= 100) {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.remove('player--active');
