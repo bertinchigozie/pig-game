@@ -49,9 +49,7 @@ btnHold.addEventListener('click', () => {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.add('player--winner');
-    document.getElementById(
-      `score--${activePlayer}`
-    ).textContent = `You Win With ${currentScore} points`;
+    document.getElementById(`score--${activePlayer}`).textContent = 'You Win';
     dice.classList.add('hidden');
     btnRoll.setAttribute('disabled', true);
     btnHold.setAttribute('disabled', true);
@@ -71,6 +69,9 @@ btnNew.addEventListener('click', () => {
   current0.textContent = 0;
   current1.textContent = 0;
   score[activePlayer] = 0;
+  score[0] = 0;
+  score[1] = 0;
+  activePlayer = 0;
   currentScore = 0;
   dice.classList.add('hidden');
   player0.classList.add('player--active');
